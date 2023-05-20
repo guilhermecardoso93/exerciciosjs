@@ -1,0 +1,9 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 3rem;
+}
+
+#lamp{
+  cursor: pointer;
+  cursor: hand;
+}

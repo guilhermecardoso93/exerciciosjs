@@ -1,0 +1,14 @@
+alert('Hello World!');
+const conta = `valor de 2 + 2 é`
+alert(`${conta} ${2 + 2}` )
+
+const buttonShowName = document.getElementById('exibir-nome')
+
+
+buttonShowName.addEventListener('click', () => {
+  const inputValue = document.getElementById('name').value;
+  let inputValueNameLength = document.getElementById('name-length')
+  alert(`Meu nome Completo é ${inputValue}`)
+  alert(`A quantidade de letras no seu nome é de ${inputValue.length}`)
+})
+
