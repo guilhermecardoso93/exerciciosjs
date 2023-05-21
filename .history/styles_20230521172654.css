@@ -56,21 +56,7 @@ div {
   flex-direction: column;
 }
 
-#contadordiv {
-  background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding:2rem;
-}
-
 #contador {
-  font-size: 3rem;
-  color: white;
-  background: black;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  border: 5px solid white;
+  font-size: 24px;
+  color: black;
 }

@@ -191,23 +191,4 @@ function isNumeroPar(texto) {
   var numero = parseInt(texto);
   return !isNaN(numero) && numero % 2 === 0;
 }
-var contador = document.getElementById('contador');
-var numero = 0;
-var cor = 'preto';
 
-function alternarCor() {
-  cor = cor === 'preto' ? 'branco' : 'preto';
-  contador.style.color = cor;
-}
-
-function exibirNumero() {
-  contador.textContent = numero;
-  alternarCor();
-  numero++;
-
-  if (numero <= 5) {
-    setTimeout(exibirNumero, 1000);
-  }
-}
-
-exibirNumero();

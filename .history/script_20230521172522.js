@@ -191,23 +191,33 @@ function isNumeroPar(texto) {
   var numero = parseInt(texto);
   return !isNaN(numero) && numero % 2 === 0;
 }
-var contador = document.getElementById('contador');
-var numero = 0;
-var cor = 'preto';
 
-function alternarCor() {
-  cor = cor === 'preto' ? 'branco' : 'preto';
-  contador.style.color = cor;
+var contadorElement = document.getElementById('contador');
+var contador = 0;
+var preto = true;
+
+function iniciarContador() {
+  contador = 0;
+  preto = true;
+  exibirNumero();
+  setInterval(alternarCor, 1000);
 }
 
 function exibirNumero() {
-  contador.textContent = numero;
-  alternarCor();
-  numero++;
+  contadorElement.textContent = contador;
+}
 
-  if (numero <= 5) {
-    setTimeout(exibirNumero, 1000);
+function alternarCor() {
+  preto = !preto;
+  if (preto) {
+    contadorElement.style.color = 'black';
+  } else {
+    contadorElement.style.color = 'white';
+  }
+  
+  if (contador < 5) {
+    contador++;
+    exibirNumero();
   }
 }
 
-exibirNumero();

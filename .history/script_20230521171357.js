@@ -124,10 +124,9 @@ var deuses = ['Aegir', 'Aud', 'Balder']
 console.log(deuses.length)
 
 deuses.forEach(function(deus) {
-  console.log(deus);
+  alert(deus);
 });
 
- /*
 deuses.map(function(deus) {
   alert(deus);
 });
@@ -140,74 +139,4 @@ deuses.reduce(function(_, deus) {
 // Usando a função de callback filter()
 deuses.filter(function(deus) {
   alert(deus);
-}); */
-
-deuses.push('Loki', 'Odin', 'Frey')
-console.log(deuses)
-console.log(deuses.length)
-
-var numbers = [5, 7, 1, 8, 9]
-
-console.log(numbers.sort())
-
-var ul = document.getElementById('nomes');
-
-deuses.forEach(deus => {
-  var li = document.createElement('li');
-  li.textContent = deus;
-  ul.appendChild(li);
-})
-
-
-var arrayTexto = [];
-
-function adicionarTexto() {
-  var input = document.getElementById('inputTexto');
-  var texto = input.value;
-
-  arrayTexto.push(texto);
-  input.value = '';
-
-  exibirLista();
-}
-
-function exibirLista() {
-  var ul = document.getElementById('lista');
-  ul.innerHTML = '';
-
-  arrayTexto.forEach(function(texto) {
-    var li = document.createElement('li');
-    li.textContent = texto;
-
-    if (isNumeroPar(texto)) {
-      li.classList.add('par');
-    }
-
-    ul.appendChild(li);
-  });
-}
-
-function isNumeroPar(texto) {
-  var numero = parseInt(texto);
-  return !isNaN(numero) && numero % 2 === 0;
-}
-var contador = document.getElementById('contador');
-var numero = 0;
-var cor = 'preto';
-
-function alternarCor() {
-  cor = cor === 'preto' ? 'branco' : 'preto';
-  contador.style.color = cor;
-}
-
-function exibirNumero() {
-  contador.textContent = numero;
-  alternarCor();
-  numero++;
-
-  if (numero <= 5) {
-    setTimeout(exibirNumero, 1000);
-  }
-}
-
-exibirNumero();
+});

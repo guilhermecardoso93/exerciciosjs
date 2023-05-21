@@ -58,13 +58,7 @@ div {
 
 #contadordiv {
   background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding:2rem;
 }
-
 #contador {
   font-size: 3rem;
   color: white;
